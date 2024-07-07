@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    src: url('Poppins-Regular.ttf');
+    font-family: 'Poppins';
+    font-weight: normal;
+}
+
+@font-face {
+    src: url('Poppins-Bold.ttf');
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+*:not(.material-icons) {
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+i.material-icons {
+    @apply align-middle;
+}
+
+body {
+    @apply min-h-screen;
+    background: linear-gradient(to bottom right, #222222, #272424);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.navbar-mobile.active {
+    @apply w-full mx-5;
+}
+
+.navbar-mobile a:not(.menu-button){
+    @apply hidden md:inline-block
+}
+
+.navbar-mobile.active a:not(.menu-button){
+    @apply block
+}
+
+.bg-app-development {
+    background: url(../img/app-development-mockup.png) rgb(255 255 255 / 0.05) no-repeat;
+    background-size: contain;
+    background-position: 0 105%;
+}
+
+.bg-web-development {
+    background: url(../img/web-development-mockup.png) rgb(255 255 255 / 0.05) no-repeat;
+    background-size: contain;
+    background-position: 105% 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .bg-app-development {
+        background:  rgb(255 255 255 / 0.05) no-repeat;
+        background-size: contain;
+        background-position: 0 105%;
+    }
+    
+    .bg-web-development {
+        background:  rgb(255 255 255 / 0.05) no-repeat;
+        background-size: contain;
+        background-position: 105% 0;
+    }
+}
