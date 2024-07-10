@@ -69,3 +69,20 @@ body {
         background-position: 105% 0;
     }
 }
+
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: #222222;
+    // padding: 13px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222222;
+  }
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FFD118;
+    border: 7px solid #222222;
+    border-radius: 999999px;
+  }

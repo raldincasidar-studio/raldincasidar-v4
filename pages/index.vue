@@ -23,7 +23,7 @@ div(class="navbar-container z-10 fixed top-0 flex justify-between items-center w
     .image.text-center(class="w-full md:w-2/5")
         img.mx-auto.my-4.w-full(class="max-w-[200px] md:max-w-[400px]" src="~/assets/img/raldin-casidar-image.png" alt="logo")
     .context.p-5(class="w-full md:w-3/5")
-        h2(class=" text-secondary text-3xl md:text-4xl font-bold my-10") Welcome, Tech Enthusiasts!
+        h2(class=" text-secondary text-3xl md:text-4xl font-bold my-10 leading-relaxed md:leading-relaxed") Welcome, Tech Enthusiasts!
         p(class="text-white/70 leading-loose md:leading-loose text-md md:text-lg my-4") With more than 4 years in the tech industry (which is like a century in developer years), I've been whipping up websites and apps that are not just functional, but downright fabulous. 
         p(class="text-white/70 leading-loose md:leading-loose text-md md:text-lg my-4") Nestled in the beautiful Philippines, I’ve become a master of both frontend and backend development. If it involves code, chances are, I’ve tinkered with it. 
         p(class="text-white/70 leading-loose md:leading-loose text-md md:text-lg my-4") Buckle up and join me on this wild adventure of creativity, caffeine, and a dash of delightful chaos!
@@ -67,7 +67,7 @@ h3(class="text-center text-secondary text-3xl md:text-4xl font-bold my-10 mt-40 
 p(class="text-white/70 leading-loose md:leading-loose text-md md:text-lg my-4 px-5 text-center mb-16 mx-auto max-w-3xl") Explore a collection of my finest work, showcasing my skills in web and app development, wordpress, and graphic design. Each project is a testament to my dedication and passion for creating seamless and intuitive digital experiences.
 
 div.p-3
-    Swiper(class="-rotate-3 overflow-x-hidden" :slides-per-view="slidesPerView" :loop="true" :modules="[SwiperAutoplay]" :autoplay="{delay: 2000, disableOnInteraction: true,}")
+    Swiper(class="-rotate-3 overflow-x-hidden" :slides-per-view="slidesPerView" :loop="true" :modules="[SwiperAutoplay]" :autoplay="{delay: 2000, disableOnInteraction: false}")
         SwiperSlide(v-for="(project, i) in portfolio" class="p-2 md:p-5") 
             div(class="pb-[80%] w-full bg-white/5 rounded-3xl relative overflow-hidden cursor-pointer border border-transparent hover:border-white" :style="`background: url(${project.image}) rgba(255,255,255,0.05) no-repeat center center; background-size: cover;`")
                 .overlay(class="flex flex-col items-center justify-center p-5 bg-black/60 h-full w-full opacity-0 hover:opacity-100 transition-all absolute inset-0")
@@ -77,6 +77,24 @@ div.p-3
 
 .text-center
     a(href="#!" class="rounded-full mb-20 text-lg md:text-xl mt-20 font-bold p-3 px-8 md:p-5 md:px-10 inline-block bg-secondary transition-all hover:opacity-70 active:scale-90") Dive into my Portfolio
+
+.text-center.my-20
+    img(src="~/assets/img/logo.svg" class="mx-auto mb-14" alt="logo")
+    h3(class="text-white text-3xl font-bold") What's Next
+
+.max-w-6xl.mx-auto.flex.my-10.flex-wrap
+    div(class=" p-4 py-10 text-center w-full lg:w-1/3 border-0 md:border-b lg:border-0 border-white/20")
+        h2(class=" text-secondary text-lg md:text-xl font-bold") Blogs
+        h1(class=" text-white text-2xl md:text-3xl font-bold uppercase my-8 leading-loose") GET AMAZING DEALS AND PROMOS
+        a(href="" class="text-md text-secondary hover:underline underline-offset-8") Learn More
+    div(class=" p-4 py-10 text-center w-full md:w-1/2 lg:w-1/3 border-y md:border-y-0  md:border-r lg:border-x border-white/20")
+        h2(class=" text-secondary text-lg md:text-xl font-bold") Hire Me
+        h1(class=" text-white text-2xl md:text-3xl font-bold uppercase my-8 leading-loose") LET’S CREATE YOUR WEBSITE IN 1 WEEK
+        a(href="" class="text-md text-secondary hover:underline underline-offset-8") Learn More
+    div(class=" p-4 py-10 text-center w-full md:w-1/2 lg:w-1/3")
+        h2(class=" text-secondary text-lg md:text-xl font-bold") Portfolio
+        h1(class=" text-white text-2xl md:text-3xl font-bold uppercase my-8 leading-loose") VIEW RECENT PROJECT PORTFOLIO
+        a(href="" class="text-md text-secondary hover:underline underline-offset-8") Learn More
 
 </template>
 
